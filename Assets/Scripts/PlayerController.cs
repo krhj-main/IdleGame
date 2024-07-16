@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int att = 10;
+    public long att = 10;
     Animator anim;
     float CurTime = 0;
 

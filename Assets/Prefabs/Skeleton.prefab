@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4605125303816805779}
   - component: {fileID: 7671168952515532221}
   - component: {fileID: 4143806430736934105}
+  - component: {fileID: -1184733299191357056}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Monster
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadee372f527f37458e43e721fc1fa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 100000000000
   StartPosition: {x: 12, y: -1.54}
   money: {fileID: 6726005662726998789, guid: 33598f71096fe5b4986ebf52d3152ae2, type: 3}
 --- !u!212 &4605125303816805779
@@ -168,3 +169,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1184733299191357056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347279521679950002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a561096aff60c4890e136897e5e06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabDamage: {fileID: 6788767864135713691, guid: 84dfded6e1695b94fa4d5b67bac5e485, type: 3}

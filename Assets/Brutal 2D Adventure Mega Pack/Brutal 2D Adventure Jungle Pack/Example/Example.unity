@@ -402,7 +402,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_Font: {fileID: 12800000, guid: 2d040b1040b12644dbfd6de09f5b5408, type: 3}
     m_FontSize: 62
     m_FontStyle: 0
     m_BestFit: 0
@@ -849,6 +849,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSpeed: 3
   isPlay: 1
+  Money: 10000000000
+  MoneyText: {fileID: 93769269}
 --- !u!114 &196719481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +968,7 @@ GameObject:
   - component: {fileID: 272617292}
   - component: {fileID: 272617293}
   - component: {fileID: 272617294}
+  - component: {fileID: 272617295}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1145,7 +1148,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a49b6fe28d3e74096a2cfd7dd434ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  att: 10000000000
+  att: 1000000000000
+  HP: 100
+  MaxHP: 100
+  hp_bar: {fileID: 776004359}
+--- !u!114 &272617295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272617288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a561096aff60c4890e136897e5e06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabDamage: {fileID: 6788767864135713691, guid: fff1f2a560f1afe4eb87385607fa2bb0, type: 3}
 --- !u!1 &290754949
 GameObject:
   m_ObjectHideFlags: 0

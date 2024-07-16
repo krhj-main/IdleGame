@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadee372f527f37458e43e721fc1fa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100000000000
+  HP: 10000000000000
+  MobDamage: 1
   StartPosition: {x: 12, y: -1.54}
   money: {fileID: 6726005662726998789, guid: 33598f71096fe5b4986ebf52d3152ae2, type: 3}
 --- !u!212 &4605125303816805779

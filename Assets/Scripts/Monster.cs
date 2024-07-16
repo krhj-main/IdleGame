@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Monster : MonoBehaviour
 {
-    public long HP = 100000000000;
+    public long HP;
     long oriHP;
+
+    public long MobDamage;
 
     Animator anim;
     public Vector2 StartPosition;
@@ -14,6 +16,8 @@ public class Monster : MonoBehaviour
     GameObject Player;
     //public ItemFx moneyPrefab;
     Transform target;
+    float CurTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,7 @@ public class Monster : MonoBehaviour
         oriHP = HP;
         anim = GetComponent<Animator>();
         target = GameObject.Find("Gold").transform;
+        CurTime = 1.5f;
     }
 
     // Update is called once per frame
@@ -35,6 +40,20 @@ public class Monster : MonoBehaviour
                 gameObject.SetActive(false);
                 transform.position = StartPosition;
             }
+        }
+        else
+        {
+            if (CurTime >= 1.5f)
+            {
+                float dis = Vector3.Distance(Player.transform.position, transform.position);
+                if (dis < 3)
+                {
+                    anim.SetBool("isAttack", true);
+                    Player.GetComponent<PlayerController>().TakeDamage(MobDamage);
+                    CurTime = 0;
+                }
+            }
+            CurTime += Time.deltaTime;
         }
     }
 
@@ -60,6 +79,7 @@ public class Monster : MonoBehaviour
             transform.position = StartPosition;
             HP = oriHP;
             GameManager.Instance.isPlay = true;
+            GameManager.Instance.UpdateMoney(1000000000);
         }
         else
         {
